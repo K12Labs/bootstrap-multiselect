@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Multiselect</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {padding-top: 60px;}
+    </style>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Bootstrap Multiselect</a>
+        </div>
+        <div class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+    </div>
+</div>
+
+<div class="container">
+    <h1 id="single" class="page-header">Single Select</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="single" class="col-sm-2 control-label">Favorite Color</label>
+                    <div class="col-sm-10">
+                        <select class="form-control multiselect" id="single">
+                            <option value="red">Red</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <h1 id="multi" class="page-header">Multi Select</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="multi" class="col-sm-2 control-label">Color You Like</label>
+                    <div class="col-sm-10">
+                        <select class="form-control multiselect" id="multi" multiple>
+                            <option value="red">Red</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <h1 id="groups" class="page-header">Optgoup Select</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="multi" class="col-sm-2 control-label">Color You Like</label>
+                    <div class="col-sm-10">
+                        <select class="form-control multiselect" id="multi" multiple>
+                            <optgroup label="Dark Colors">
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                            </optgroup>
+                            <optgroup label="Light Colors">
+                                <option value="red">Pink</option>
+                                <option value="white">White</option>
+                                <option value="light-blue">Light Blue</option>
+                            </optgroup>
+
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <h2 id="usage" class="page-header">Usage</h2>
+    <h3>Options</h3>
+        <p>
+            The Multiselect plugin allows you to configure options via data attributes or directly via javascript
+        </p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Example:
+        </div>
+        <div class="panel-body" id="#exampleTarget">
+
+            <code>
+                &lt;select class="form-control multiselect" data-list="3" data-target="#exampleTarget" multiple&gt;
+            </code>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="options-example" class="col-sm-2 control-label">Color You Like</label>
+                    <div class="col-sm-10">
+                        <select class="form-control multiselect" data-list="3" id="options-example" multiple>
+                            <optgroup label="Dark Colors">
+                                <option value="red" selected>Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue" selected>Blue</option>
+                            </optgroup>
+                            <optgroup label="Light Colors">
+                                <option value="red">Pink</option>
+                                <option value="white" selected>White</option>
+                                <option value="light-blue">Light Blue</option>
+                            </optgroup>
+
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th style="width: 100px;">Name</th>
+            <th style="width: 50px;">type</th>
+            <th style="width: 50px;">default</th>
+            <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>list</td>
+            <td>int</td>
+            <td>1</td>
+            <td>The number items that are listed in the multiselect</td>
+        </tr>
+        <tr>
+            <td>target</td>
+            <td>string</td>
+            <td>body</td>
+            <td>The target for the location of the generated modal. By default, the modal is appended the the body tag.</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    <hr>
+
+    <footer>
+        <p>(c) K12 Services, Inc 2014</p>
+    </footer>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="src/multiselect.js"></script>
+</body>
+</html>
