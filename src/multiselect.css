@@ -4,6 +4,10 @@
 //  Available under the The MIT License (MIT)
 */
 
+.multiselect-menu {
+    margin: 0;
+    padding: 0;
+}
 .multiselect-menu li {
     list-style: none;
 }
