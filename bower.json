@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap-modalselect-gh-page",
+  "version": "0.0.1",
+  "homepage": "https://github.com/K12Labs/bootstrap-multiselect",
+  "authors": [
+    "Brandon Mueller <bmueller@k12servicesinc.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-modalselect": "~0.0.1",
+    "font-awesome": "~4.0.3"
+  }
+}

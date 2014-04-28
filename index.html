@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Bootstrap Multiselect</title>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="src/multiselect.css" rel="stylesheet">
     <style type="text/css">
         body {padding-top: 60px;}
@@ -40,6 +40,15 @@
     </div>
 </div>
 <div class="container">
+    <h2 id="getting-started" class="page-header">Getting Started</h2>
+    <h3>Install <a href="http://bower.io/">(bower)</a></h3>
+    <p>You can install as a bower package:</p>
+    <pre>bower install bootstrap-modalselect</pre>
+    <div class="alert alert-warning">
+        <p><strong>Heads Up!</strong> The bower package name of the package is <code>bootstrap-modalselect</code>
+            because <a href="https://github.com/davidstutz/bootstrap-multiselect">bootstrap-multiselect</a> was taken.</p>
+    </div>
+
     <h2 id="examples" class="page-header">Examples</h2>
             <h3 id="single">Single Select</h3>
             <form class="form-horizontal" role="form">
@@ -187,8 +196,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="src/multiselect.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/bootstrap-modalselect/src/multiselect.js"></script>
 </body>
 </html>
