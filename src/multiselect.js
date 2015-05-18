@@ -186,4 +186,4 @@
     };
 
     $('select.multiselect').multiselect();
-})(jQuery)
+})(jQuery);
