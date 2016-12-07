@@ -39,7 +39,7 @@
                 }, $(this).data());
                 var $$ = $(this).hide();
                 $$.data('multiselect', config);
-                var $div = $('<div class="input-group dropdown-multiselect" />').insertAfter($$);
+                var $div = $('<div class="input-group dropdown-multiselect" />');
                 $$.data('multiselect-widget', $div);
                 var $span = $('<input class="label-multiselect form-control" readonly />').appendTo($div);
                 var $btn = $('<div class="input-group-btn"><button class="btn btn-default" type="button">&nbsp;<span class="caret"></span></button></div>').appendTo($div);
@@ -77,11 +77,13 @@
 
                     }));
                 }
+                $div.insertAfter($$);
                 $$.multiselect('refresh');
             },
             refresh: function () {
                 var $menu = $(this).multiselect('modal').find('[role=multiselect]').empty();
-                var $controls = $(this).multiselect('modal').find('[role=multiselectcontrols]');
+                var $container = $menu.parent();
+                $menu.detach();
                 var $$ = $(this);
                 var val = $$.val();
                 var type = ($$.attr('multiple')) ? 'checkbox' : 'radio';
@@ -155,6 +157,7 @@
                             .append($(this).text()));
                     }
                 });
+                $container.prepend($menu);
                 $$.multiselect('refreshLabel');
             },
             refreshLabel: function () {
@@ -187,3 +190,4 @@
 
     $('select.multiselect').multiselect();
 })(jQuery);
+
