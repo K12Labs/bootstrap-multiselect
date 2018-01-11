@@ -63,9 +63,12 @@
                 });
                 if ($$.attr('multiple')) {
                     $controls.append($("<button type='button' class='btn btn-default btn-xs pull-left' />").html('<i class="icon-check-empty"></i>uncheck all').click(function() {
-                        $$.val('');
-                        $menu.find(":checkbox").attr('checked', false);
-                        $$.multiselect('refreshLabel');
+                        $menu.find(":checkbox").each(function() {
+                            if ($(this).is(':checked')) {
+                                $(this).prop('checked', false);
+                                $(this).trigger('change');
+                            }
+                        });
                     }));
                     $controls.append($("<button type='button' class='btn btn-default btn-xs  pull-left' />").html('<i class="icon-check"></i>check all').click(function() {
                         $menu.find(":checkbox").each(function() {
