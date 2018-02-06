@@ -94,13 +94,8 @@
                     var check = $(this).is(":checked");
                     var self = this;
                     if ($$.attr('multiple')) {
-                        var values = $$.val() || [];
-                        if (check) {
-                            values.push($(this).val());
-                        } else {
-                            values.splice($.inArray($(this).val(), values), 1);
-                        }
-                        $$.val(values).multiselect('refreshLabel').trigger('change');
+                        $$.find('option[value="' + $(this).val() + '"]').prop('selected', check)
+                        $$.multiselect('refreshLabel').trigger('change');
                         return $(this);
                     }
                     $menu.find("input[type=radio]").each(function() {
